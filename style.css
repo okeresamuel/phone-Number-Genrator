@@ -1,0 +1,56 @@
+body{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    
+}
+.Title{
+    text-align:center;
+    color: white;
+    font-size:18px;
+    font-family:system-ui;
+    margin: auto;
+    width: max-content;
+}
+#Form_container{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    background-color:rgba(10, 10, 10, 0.925);
+    padding: 20vh;
+    border-radius:5px;
+}
+#input,.btn,#real_phone_num{
+    display: flex;
+    width:179px;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 3px;
+    height: 30px;
+    border:none;
+    padding: 8px;
+    text-align: center;
+    font-family: system-ui;
+}
+.btn{
+    display: block;
+    height: 45px;
+    width:195px;
+    background-color: blue;
+    color: white;
+}
+
+.cpNumber{
+    background-color:rgb(40, 26, 243);
+    border: none;
+    padding:10px;
+    border-radius:4px;
+    position: fixed;
+    cursor: pointer;
+    bottom: 10px;
+    color: aliceblue;
+    left: 70%;
+    transform: translate(-0%,-50%);
+}
