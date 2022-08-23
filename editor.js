@@ -22,7 +22,7 @@ function createPhoneNumber(nums){
     return `(${one}) ${two}-${three}`
     }
 
-    function EmptyInput(){
+    function EmptyInputOne(){
         swal({ title: "please enter something", text: "", icon: "warning", buttons: true, dangerMode: true, })
     }
 
@@ -30,16 +30,25 @@ function createPhoneNumber(nums){
      function preventDef(e){
       e.preventDefault()
       if( input.value === ""){
-        EmptyInput()
+        EmptyInputOne()
       }else{
         real_phone_num.value= createPhoneNumber(input.value).trim().split().join("")
         cpNumber.style.display="block" 
       }
         setTimeout(()=>{input.value= ""},2000)
-          cpNumber.addEventListener("click", ()=>{
-            navigator.clipboard.writeText(real_phone_num.value);
-             cpNumber.innerText="copied Number" 
-          })
+        cpNumber.addEventListener("click", ()=>{
+        navigator.clipboard.writeText(real_phone_num.value);
+        cpNumber.innerText="copied Number" 
+    
+        // reset btn inner text
+        setTimeout(()=>{ cpNumber.innerText="copy Number", real_phone_num.value= ""}, 2000)
+         
+        if(real_phone_num.value === "" ){
+          EmptyInputOne() 
+          cpNumber.innerText="copy Number"
+        } 
+       
+       })
     }
     btn.addEventListener("click", preventDef)
     

@@ -17,7 +17,6 @@ body{
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    display: block;
     background-color:rgba(10, 10, 10, 0.925);
     padding: 20vh;
     border-radius:5px;
@@ -47,10 +46,9 @@ body{
     border: none;
     padding:10px;
     border-radius:4px;
-    position: fixed;
-    cursor: pointer;
-    bottom: 10px;
+    cursor: pointer;;
     color: aliceblue;
-    left: 70%;
-    transform: translate(-0%,-50%);
+     margin: auto;
+     position: relative;
+     top: 50px;
 }
