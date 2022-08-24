@@ -2,7 +2,7 @@ body{
     margin:0px;
     padding:0px;
     box-sizing: border-box;
-    
+    color:white;
 }
 .Title{
     text-align:center;
@@ -14,12 +14,16 @@ body{
 }
 #Form_container{
     position: fixed;
-    top:50%;
-    left:50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%,-50%);
-    background-color:rgba(10, 10, 10, 0.925);
-    padding: 20vh;
-    border-radius:5px;
+    background-color: rgba(10, 10, 10, 0.925);
+    width: 90%;
+    height: 60%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #input,.btn,#real_phone_num{
     display: flex;
@@ -47,8 +51,31 @@ body{
     padding:10px;
     border-radius:4px;
     cursor: pointer;;
-    color: aliceblue;
+     color: aliceblue;
      margin: auto;
      position: relative;
      top: 50px;
+
+}
+.list_num_icon{   
+    position: fixed;
+    left: 9px;
+    top: 7px;
+    cursor: pointer;
+}
+.number_list{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    width: 400px;
+    height:270px;
+    border-radius: 4px;
+    display:none;
+}
+.hidesavedNum{
+    display:block;
+}
+@media(min-width:700px){
+    #Form_container{
+        max-width: 700px;
+    }
 }
